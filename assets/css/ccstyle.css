@@ -8,7 +8,11 @@ html, body {
 section{
 	width: 100%;
 	height: 100%;
+    min-height: min-content;
 	display: flex;
+    z-index: 3;
+    position: relative;
+    background: transparent;
 }
 
 section.newsmedia{
@@ -33,6 +37,62 @@ section.newsmedia::before{
     z-index: -1;
 }
 
+section.noChess{
+    z-index: 4;
+    background: white;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    z-index: 5;
+}
+
+nav div.navBody{
+    top: 1.5em;
+    position: fixed;
+    right: 0;
+    width: 92%;
+    height: 3.6em;
+    background-color: #01cdce;
+}
+
+nav > div.navBody div{
+    display: inline-block;
+}
+
+div.nav-s{
+    width: 20%;
+}
+
+div.nav-menu{
+    width: auto;
+}
+
+nav > div.navBody div > .nav-ul-menu{
+    font-size: 1.2em;
+    flex-direction: row;
+    list-style: none;
+    display: flex;
+}
+
+nav > div.navBody div > .nav-ul-menu li{
+    display: inline-block;
+    padding: 0 1.25em 0 1.25em;
+    margin: 0 1.25em 0 1.25em;
+}
+
+nav > div.navBody div > .nav-ul-menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav > img.logo{
+    margin: 0 0 0 1.5em;
+    position: fixed;
+}
+/*
 nav{
     position: fixed;
     width: 100%;
@@ -136,7 +196,7 @@ nav > ul > li > a{
     color: #ffffff;
     display: block;
 }
-
+*/
 
 /*
  * Estilo para desktop
@@ -153,25 +213,37 @@ nav ul li{
 */
 h1{
 	margin:auto;
+    font-size: xx-large;
 }
 
 h2{
-	margin: 4em auto 2em auto;
+    padding: 0 0.5em 0 3em;
+    font-size: 4em;
+    color: #1cafb9;
 }
 
-section:nth-child(odd){background: lightgrey}
+h2.lessM {
+    margin: 0.83em 0 0 0;
+}
+
+/*section:nth-child(odd){background: lightgrey}
 
 section:nth-child(even){background: lightblue}
 
 section#inicio{background: white !important}
-
+*/
+/*
+section{
+    background: url(../img/backg.png)
+}
+*/
 div#chessQueen{
     background-image: url(../img/chessQueen.png);
     width: 20%;
     height: 60%;
     right: 0;
     margin: auto 3vw auto 3vw;
-    top: 0;
+    top: 20%;
     bottom: 0;
 }
 
@@ -183,3 +255,88 @@ div.fixedImg{
     position: fixed;
 }
 
+div.parallaxBack{
+    background-image: url(../img/backg.png);
+    display: block;
+    position: fixed;
+    z-index: 1;
+    content: " ";
+    height: 100%;
+    width: 100%;
+}
+
+section div.content{
+    width: 100%;
+    height: 100%;
+    padding: 5em 20% 20% 20%;
+}
+
+span.arrowDown {
+    background-image: url(../img/arrowDown.png);
+    height: .4em;
+    width: .4em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    bottom: 0;
+    position: relative;
+    margin: 0 0 0 .5em;
+}
+
+div.sectionContent{
+    padding: 0 35% 0 20%;
+    text-align: justify;
+    font-size: larger;
+    line-height: 22pt;
+    color: #424242;
+}
+
+div.sectionContent p.uno::first-letter {
+    color: #1cafb9;
+    font-size: xx-large;
+}
+
+div.content div.item {
+    width: 100%;
+    margin: .25em 1em .5em 5em;
+}
+
+div.contentImg {
+    width: 22%;
+    display: inline-block;
+}
+
+div.contentImg img {
+    position: relative;
+    width: 100%;
+}
+
+div.contentText {
+    width: 66%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding: 0 0 0 1.5rem;
+}
+
+div.contentText h3 {
+    margin: 0.3em 0 0 0;
+    color: #2cacbe;
+}
+
+div.contentText p.gal {
+    margin: .5em 0 1em 0;
+    color: #424242;
+}
+
+button.more {
+    background: #19adb9;
+    color: white;
+    padding: 0.3em 2em .3em 2em;
+    border-radius: 16px;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 1s;
+    margin: 0 0 0 4em;
+}
