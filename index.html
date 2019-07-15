@@ -5,6 +5,7 @@
 	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./assets/css/ccstyle.css">
 	<title>Consultoría Contracorriente</title>
+	<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
 </head>
 <body>
 
@@ -14,8 +15,9 @@
 	 		<div class="nav-menu">
 	 			<ul class="nav-ul-menu">
 	 				<li><a href="#inicio">Inicio</a></li>
+	 				<li><a href="#somos">Somos</a></li>
 	 				<li><a href="#servicios">Servicios</a></li>
-	 				<li><a href="#contexto">contexto</a></li>
+	 				<li><a href="#contexto">Contexto</a></li>
 	 				<li><a href="#contacto">Contacto</a></li>
 	 			</ul>
 	 		</div>
@@ -50,8 +52,8 @@
 				</div>
 				<div class="contentText">
     				<h3>Sector Educativo</h3>
-					<p class="gal">
-						Contracorriente tiene en el ámbito educativo una fortaleza al ofrecer servicios de calidad en tareas de capacitación, en el diseño y la evaluación de programas de estudio, mapas curriculares. También estudios de rendimiento y calidad académicos; fichas . . .
+					<p class="gal ellipsis">
+						Contracorriente tiene en el ámbito educativo una fortaleza al ofrecer servicios de calidad en tareas de capacitación, en el diseño y la evaluación de programas de estudio, mapas curriculares. También estudios de rendimiento y calidad académicos; fichas temáticas y comparativos sobre educación superior entre otros servicios.
 					</p>
 					<button class="more" type="button">ver más</button>
     			</div>
@@ -62,8 +64,8 @@
 				</div>
 				<div class="contentText">
     				<h3>Comunicación política y relaciones públicas</h3>
-					<p class="gal">
-						El apropiado manejo de la comunicación es un recurso esencial para todos los sectores que tienen contacto con el público, con el ciudadano y buscan comunicar sus productos, servicios y resultados. Contracorriente en esta área ofrece servicios integrales . . .
+					<p class="gal ellipsis">
+						El apropiado manejo de la comunicación es un recurso esencial para todos los sectores que tienen contacto con el público, con el ciudadano y buscan comunicar sus productos, servicios y resultados. Contracorriente en esta área ofrece servicios integrales, al adaptarse a las circunstancias y necesidades de los actores o de las organizaciones desde el diseño de su lanzamiento, hasta el cierre de ciclos institucionales.  
 					</p>
 					<button class="more" type="button">ver más</button>
     			</div>
@@ -74,8 +76,8 @@
 				</div>
 				<div class="contentText">
     				<h3>Prospectiva y Marketing Político</h3>
-					<p class="gal">
-						Ahora es indispensable que el desempeño y la capacidad de respuesta de las instituciones sea de forma estructurada, alejada de la improvisación, de las ocurrencias y de las acciones que carecen de método, confiabilidad, seriedad y objetivos claros. Para esas . . .
+					<p class="gal ellipsis">
+						Ahora es indispensable que el desempeño y la capacidad de respuesta de las instituciones sea de forma estructurada, alejada de la improvisación, de las ocurrencias y de las acciones que carecen de método, confiabilidad, seriedad y objetivos claros. Para esas necesidades político – electorales Contracorriente ofrece modelos exclusivos para que las instituciones avancen con certidumbre en un entorno exigente y complejo.
 					</p>
 					<button class="more" type="button">ver más</button>
     			</div>
@@ -86,8 +88,8 @@
 				</div>
 				<div class="contentText">
     				<h3>Producción: editorial, radio, televisión y digital</h3>
-					<p class="gal">
-						Contracorriente ofrece servicios de producción desde la concepción creativa, la redacción y la realización audio – visual para que su institución comunique eficazmente. Mención aparte merece nuestro trabajo editorial con el diseño, elaboración . . .
+					<p class="gal ellipsis">
+						Contracorriente ofrece servicios de producción desde la concepción creativa, la redacción y la realización audio – visual para que su institución comunique eficazmente. Mención aparte merece nuestro trabajo editorial con el diseño, elaboración y producción de libros, publicaciones periódicas y suplementos entre otros editables.  
 					</p>
 					<button class="more" type="button">ver más</button>
     			</div>
@@ -95,7 +97,7 @@
 		</div>
 	</section>
 	<!--
-		This
+		Information required to publishing this
 		<section id="equipo" class="newsmedia">
 			<h2>Equipo</h2>
 		</section>
@@ -108,6 +110,33 @@
 			</div>
 		</div>
 	</section>
+	<section id="contacto" class="noChess">
+		<div class="content">
+			<h2 class="">Contacto</h2>
+			<div class="item">
+				<div id="mapa" class="ubicacion"></div>
+				<form id="FormContacto">
+					<div>
+                    	<input type="text" placeholder="Nombre" name="nombre">
+                    </div>
+                    <div>
+                    	<input type="text" placeholder="Email" name="email">
+                	</div>
+                    <div>
+                    	<input type="text" placeholder="Telefono" name="telefono">
+                    </div>
+                    <div>
+                    	<input type="text" placeholder="Empresa" name="empresa">
+                    </div>
+                    <textarea name="mensaje" placeholder="Mensaje"></textarea>
+                   	<span class="g-recaptcha" data-sitekey="6LevfAcAAAAAAGECEMgS9n1Opij63DGKVNfQr7rX"></span>
+                    <button type="button" class="enviar">::ENVIAR::</button>
+
+				</form>
+			</div>
+		</div>
+	</section>
 	<script type="text/javascript" src="./assets/js/ccscript.js"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmogWrjCd8slNwmp7Lk1WqfMqAgOeJ86I&callback=myMap"></script>
 </body>
 </html>
