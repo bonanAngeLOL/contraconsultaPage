@@ -6,13 +6,14 @@ html, body {
 }
 
 section{
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
     min-height: min-content;
-	display: flex;
+    display: flex;
     z-index: 3;
     position: relative;
     background: transparent;
+    flex-flow: row wrap;
 }
 
 section.newsmedia{
@@ -216,7 +217,6 @@ h1{
 }
 
 h2{
-    padding: 0 0.5em 0 3em;
     font-size: 4em;
     color: #1cafb9;
 }
@@ -265,10 +265,7 @@ div.parallaxBack{
 }
 
 section div.content{
-    width: 100%;
-    height: 100%;
-    padding: 3em 20% 0 20%;
-    min-height: min-content;
+    display: flex
 }
 
 span.arrowDown {
@@ -283,11 +280,12 @@ span.arrowDown {
 }
 
 div.sectionContent{
-    padding: 0 35% 0 20%;
     text-align: justify;
     font-size: larger;
     line-height: 22pt;
     color: #424242;
+    min-height: min-content;
+    display: flex;
 }
 
 div.sectionContent p.uno::first-letter {
@@ -330,14 +328,14 @@ div.contentText p.gal {
     color: #424242;
 }
 
-div.contentText p.gal.ellipsis{
+p.gal.ellipsis{
     max-height: 3.6em;
     overflow: hidden !important;
     position: relative;
     text-overflow: ellipsis;
 }
 
-div.contentText p.gal.ellipsis:before {
+p.gal.ellipsis:before {
     content: ' ';
     position: absolute;
     right: 0;
@@ -368,7 +366,6 @@ div.ubicacion{
 form#FormContacto {
     width: 100%;
     margin: 1em 0 3em 0;
-    display: inline-block;
 }
 
 form#FormContacto > div {
@@ -388,7 +385,7 @@ form#FormContacto input[type="text"] {
 }
 
 form#FormContacto textarea {
-    width: 91.5%;
+    width: 100%;
     height: 10em;
     margin: 1em 0 1em 0;
     border: solid .1em #2facba;
@@ -423,3 +420,6 @@ button.enviar {
     margin: .5em 0 .5em 0;
 }
 
+form#FormContacto > * {
+    padding: 0em;
+}
